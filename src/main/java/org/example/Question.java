@@ -1,3 +1,5 @@
+package org.example;
+
 class Question {
     private String question;
     private String[] options;
