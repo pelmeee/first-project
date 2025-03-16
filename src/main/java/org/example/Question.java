@@ -1,16 +1,30 @@
-package org.example;
+class Question {
+    private String question;
+    private String[] options;
+    private int correctAnswerIndex;
 
-import java.util.ArrayList;
-
-public class Question {
-    private int quantity;
-    private String text;
-
-    private ArrayList<String> answers;
-
-    public Question(int quantity, String text, ArrayList<String> answers) {
-        this.quantity = quantity;
-        this.text = text;
-        this.answers = answers;
+    public Question(String question, String[] options, int correctAnswerIndex) {
+        this.question = question;
+        this.options = options;
+        this.correctAnswerIndex = correctAnswerIndex;
     }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public String[] getOptions() {
+        return options;
+    }
+
+    public boolean isAnswerCorrect(int userAnswerIndex) {
+        return userAnswerIndex == correctAnswerIndex;
+    }
+
+    public  int getCorrectAnswerIndex() {
+
+        return 0;
+    }
+
 }
+
